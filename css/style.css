@@ -36,12 +36,38 @@ ul{
     list-style: none;
 }
 .section{
-    
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.section.section.back-section{
+    z-index: 1;
+}
+
+.section.active{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 .section.back-section
 {
@@ -146,6 +172,7 @@ ul{
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 .aside .logo{
     position: absolute;
@@ -201,6 +228,7 @@ ul{
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .aside .nav-toggler span{
     height: 2px;
@@ -209,7 +237,9 @@ ul{
     display: inline-block;
     position: relative;
 }
-
+.aside .nav-toggler.open span{
+    background-color: transparent;
+}
 .aside .nav-toggler span::before{
     content: '';
     height: 2px;
@@ -219,6 +249,11 @@ ul{
     top: -6px;
     left: 0;
 }
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
 .aside .nav-toggler span::after{
     content: '';
     height: 2px;
@@ -227,6 +262,10 @@ ul{
     position: absolute;
     top: 6px;
     left: 0;
+}
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
 }
 .aside .nav{
     margin-top: 50px;
@@ -706,6 +745,16 @@ h3.my-profession{
     .aside{
         left: -270px;
         
+    }
+    .aside.open{
+        left: 0;
+    }
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+    .section{
+        left: 0;
     }
     .main-content{
         padding-left: 0;
