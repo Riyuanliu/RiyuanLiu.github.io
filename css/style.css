@@ -412,50 +412,40 @@ h3.my-profession{
     margin-right: 15px;
     margin-top: 10px;
 }
-.about .about-content .skills{
+.email-link {
+    color: var(--text-black-900); /* Change the link color to black */
+    text-decoration: none; /* Optional: removes the underline */
+}
+
+.email-link:hover {
+    color: lightblue; /* Change color on hover, if desired */
+}
+
+/*skill*/
+.about .about-content .skills-container {
     flex: 0 0 40%;
     max-width: 40%;
-    
     margin-top: 40px;
 }
-.about .about-content .skills .skill-item{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.about .about-content .skills .skill-item h5{
-    line-height: 40px;
-    font-weight: 600;
-    font-size: 16px;
+.skill-group h3 {
+    font-size: 15px;
     color: var(--text-black-900);
-    text-transform: capitalize;
+    font-family: 'Poppins' sans-serif;
 }
-.about .about-content .skills .skill-item .progress{
-    background-color: var(--bg-black-50);
-    height: 7px;
-    border-radius: 4px;
-    width: 100%;
-    position: relative;
+.skill-group ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
 }
-.about .about-content .skills .skill-item{
-    margin-bottom: 25px;
+.skill-group li {
+    background: var(--skin-color); /* Background color for the skill item */
+    color: white; /* Text color for the skill item */
+    display: inline-block; /* Aligns items in a row */
+    margin-top:5px;
+    margin-right: 10px; /* Spacing between items */
+    padding: 5px 10px; /* Padding inside each item */
+    border-radius: 5px; /* Rounded corners for each item */
+}
 
-}
-.about .about-content .skills .skill-item .progress .progress-in{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 4px;
-    background-color: var(--skin-color);
-}
-.about .about-content .skills .skill-item .skill-percent{
-    position: absolute;
-    right: 0;
-    color: var(--text-black-900);
-    top: -40px;
-    font-weight: 400;
-    line-height: 40px;
-}
 .about .about-content .education,
 .about .about-content .experience{
     color: var(--text-black-900);
@@ -643,10 +633,10 @@ h3.my-profession{
     cursor: pointer;
 }
 
-.portfolio .portfolio-item-inner .portfolio-img img
-{
+.portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
     display: block;
+    object-fit: cover;
 }
 
 /* CONTACT */
@@ -804,7 +794,7 @@ h3.my-profession{
     .service .service-item,
     .about .about-content .experience, 
     .about .about-content .education, 
-    .about .about-content .skills, 
+    .about .about-content .skills-container, 
     .about .about-content .personal-info
     {
         flex: 0 0 100%;
