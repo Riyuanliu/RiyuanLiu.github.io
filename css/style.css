@@ -42,6 +42,15 @@ ul{
     display: block;
     padding: 0 30px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
 }
 .section.back-section
 {
@@ -53,6 +62,17 @@ ul{
     z-index: 2;
     opacity: 1;
     animation: slideSection 1s ease;
+}
+@keyframes slideSection
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
 }
 
 .hidden{
@@ -417,20 +437,18 @@ h3.my-profession{
     font-weight: 400;
     line-height: 40px;
 }
-
 .about .about-content .education,
 .about .about-content .experience{
+    color: var(--text-black-900);
     flex:0 0 50%;
     max-width: 50%;
     margin-top: 30px;
-    color: var(--text-black-900);
 }
 .about .about-content h3.title{
     font: 24px;
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
-    
 }
 
 .about .about-content .timeline-box{
