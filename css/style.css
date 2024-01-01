@@ -527,12 +527,26 @@ h3.my-profession{
     text-transform: capitalize;
     color: var(--text-black-900);
 }
+.about .about-content .timeline .timeline-title-company{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-title-job-title{
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+
 .about .about-content .timeline .timeline-text{
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
     color: var(--text-black-700)
 }
+
 /* service*/
 .service .container{
     padding-bottom: 40px;
@@ -788,6 +802,22 @@ h3.my-profession{
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item,
+    .about .about-content .experience, 
+    .about .about-content .education, 
+    .about .about-content .skills, 
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 467px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .personal-info .info-item,
     .about .about-content .experience, 
     .about .about-content .education, 
     .about .about-content .skills, 
