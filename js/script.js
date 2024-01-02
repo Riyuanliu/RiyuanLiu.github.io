@@ -1,10 +1,9 @@
 var typed = new Typed(".typing",{
-    strings:["Software Developer", "Software Enginner", "Data Sciencist"],
+    strings:["Software Developer", "Software Enginner", "Data Analyst"],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
 })
-
 /* ==========================  Aside ========================== */
 const nav = document.querySelector(".nav"),
     navList = nav.querySelectorAll("li"),

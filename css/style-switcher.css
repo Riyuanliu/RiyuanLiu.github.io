@@ -14,6 +14,9 @@
 .style-switcher.open{
     transform: translateX(-25%);
 }
+.style-switcher-toggler.s-icon{
+    padding-top: 3px;
+}
 
 .style-switcher .s-icon{
     position: absolute;
@@ -25,6 +28,7 @@
     color: var(--text-black-900);
     right: 100%;
     border: 1px solid var(--bg-black-50);
+
     margin-right: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
